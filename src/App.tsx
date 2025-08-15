@@ -5,15 +5,11 @@ import { PersonScore } from './PersonScore';
 function App() {
   const [temp, setTemp] = useState(false);
 
-  const tempHandler = () => {
-    setTemp(true);
-  }
-
     return (
       <div>
         <div> <PersonScore /> </div>
 
-        <button onClick={tempHandler} aria-label='text generator'>
+        <button onClick={() => {setTemp(true);}} aria-label='text generator'>
           text generator
         </button>
 
